@@ -1,0 +1,21 @@
+name: Joining
+options:
+  bundleIdPrefix: com.duckha.joining
+targets:
+  Joining:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - Sources
+    settings:
+      base:
+        INFOPLIST_FILE: Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.duckha.joining
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: NO
+    dependencies:
+      - sdk: MusicKit.framework
+      - sdk: MapKit.framework
+      - sdk: CoreLocation.framework
+      - sdk: CloudKit.framework
